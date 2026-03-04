@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feria Digital Agropecuaria</title>
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+
+<body>
+  <!-- HEADER PROFESIONAL -->
+  <header class="header">
+    <div class="header-content">
+      <div class="header-logo">
+        <div class="logo-icon">🌾</div>
+        <div>
+          <h1>Feria Digital Agropecuaria</h1>
+          <p class="tagline">Conectando productores con oportunidades</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="contenedor">
+    
+    <!-- VISTA PRINCIPAL (MENÚ INICIO) -->
+    <section id="vista-inicio" class="vista activa fade-in">
+      <div class="intro-section">
+        <h2>Bienvenido a tu Plataforma Agropecuaria</h2>
+        <p>Explora cultivos, comparte fotos de tu producción, cuenta historias y conéctate con nosotros.</p>
+      </div>
+
+      <div class="grid-botones">
+        <button class="btn btn-menu" data-vista="cultivo">
+          <span class="btn-icon">🌱</span>
+          <span class="btn-text">Tipos de Cultivo</span>
+        </button>
+        <button class="btn btn-menu" data-vista="galeria">
+          <span class="btn-icon">📷</span>
+          <span class="btn-text">Galería de Fotos</span>
+        </button>
+        <button class="btn btn-menu" data-vista="historias">
+          <span class="btn-icon">📖</span>
+          <span class="btn-text">Historias</span>
+        </button>
+        <button class="btn btn-menu btn-principal" data-vista="contacto">
+          <span class="btn-icon">📞</span>
+          <span class="btn-text">Contacto</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- VISTA: TIPO DE CULTIVO -->
+    <section id="vista-cultivo" class="vista fade-in">
+      <div class="section-header">
+        <h2>🌱 Tipos de Cultivo</h2>
+        <p>Descubre los principales productos que trabajamos en la región</p>
+      </div>
+
+      <div class="cultivos-grid">
+        <div class="cultivo-card">
+          <div class="cultivo-icon">☕</div>
+          <h3>Café</h3>
+          <p>Granos de alta calidad, producción sostenible y certificada internacionalmente.</p>
+        </div>
+        <div class="cultivo-card">
+          <div class="cultivo-icon">🍌</div>
+          <h3>Plátano</h3>
+          <p>Variedades seleccionadas para mercado local e internacional.</p>
+        </div>
+        <div class="cultivo-card">
+          <div class="cultivo-icon">🍫</div>
+          <h3>Cacao</h3>
+          <p>Chocolate de origen, con trazabilidad completa desde la planta.</p>
+        </div>
+        <div class="cultivo-card">
+          <div class="cultivo-icon">🥑</div>
+          <h3>Aguacate</h3>
+          <p>Producción orgánica y con prácticas agroforestales.</p>
+        </div>
+      </div>
+
+      <button class="btn-volver" id="volver-cultivo">← Volver al inicio</button>
+    </section>
+
+    <!-- VISTA: GALERÍA -->
+    <section id="vista-galeria" class="vista fade-in">
+      <div class="section-header">
+        <h2>📷 Galería de Fotos</h2>
+        <p>Comparte tus mejores momentos de la producción agrícola</p>
+      </div>
+
+      <div class="upload-section">
+        <label for="inputFotos" class="btn btn-upload">
+          <span>📁 Seleccionar fotos</span>
+        </label>
+        <input type="file" id="inputFotos" accept="image/*" multiple style="display: none;" />
+        <p class="upload-hint">Puedes seleccionar una o varias fotos</p>
+      </div>
+
+      <div id="galeria-container" class="galeria-grid">
+        <!-- Las fotos se mostrarán aquí -->
+      </div>
+
+      <button class="btn-volver" id="volver-galeria">← Volver al inicio</button>
+    </section>
+
+    <!-- VISTA: HISTORIAS -->
+    <section id="vista-historias" class="vista fade-in">
+      <div class="section-header">
+        <h2>📖 Historias</h2>
+        <p>Conoce las experiencias de nuestros productores</p>
+      </div>
+
+      <div class="historias-list">
+        <div class="historia-card">
+          <div class="historia-avatar">👨‍🌾</div>
+          <h3>Juan Santiago</h3>
+          <p class="historia-date">Caffetero desde 1995</p>
+          <p class="historia-content">
+            "Hace 25 años decidí cambiar los métodos tradicionales por técnicas sostenibles. Hoy, mis cultivos son más productivos y respetan el medio ambiente. La Feria Digital me ha permitido conectar con nuevos mercados."
+          </p>
+        </div>
+
+        <div class="historia-card">
+          <div class="historia-avatar">👩‍🌾</div>
+          <h3>María Gómez</h3>
+          <p class="historia-date">Productora de Plátano</p>
+          <p class="historia-content">
+            "Junto a mi familia hemos construido una pequeña granja que ahora es reconocida. Usar la plataforma digital fue un paso importante para vender directamente y obtener mejores precios."
+          </p>
+        </div>
+
+        <div class="historia-card">
+          <div class="historia-avatar">👨‍⚙️</div>
+          <h3>Carlos Rodríguez</h3>
+          <p class="historia-date">Innovador Agrícola</p>
+          <p class="historia-content">
+            "Implementé técnicas de agricultura de precisión en mi parcela de cacao. Los resultados: 40% más producción y menos desperdicio. La tecnología es el futuro."
+          </p>
+        </div>
+      </div>
+
+      <button class="btn-volver" id="volver-historias">← Volver al inicio</button>
+    </section>
+
+    <!-- VISTA: CONTACTO -->
+    <section id="vista-contacto" class="vista fade-in">
+      <div class="section-header">
+        <h2>📞 Contacto</h2>
+        <p>Escríbenos, llamanos o comunícate por WhatsApp</p>
+      </div>
+
+      <div class="contacto-grid">
+        <div class="contacto-card">
+          <h3>Información General</h3>
+          <p><strong>📧 Correo:</strong> <a href="mailto:info@feriadigital.com">info@feriadigital.com</a></p>
+          <p><strong>📱 Celular:</strong> <a href="tel:+573000000000">+57 300 000 0000</a></p>
+          <p><strong>🏢 Ubicación:</strong> Medellín, Colombia</p>
+          <p><strong>⏰ Horario:</strong> Lun - Vie, 8:00 AM - 5:00 PM</p>
+        </div>
+
+        <div class="contacto-card">
+          <h3>Acciones Rápidas</h3>
+          <div class="acciones">
+            <a class="btn-accion" href="mailto:info@feriadigital.com">
+              <span>✉️</span> Enviar correo
+            </a>
+            <a class="btn-accion" href="https://wa.me/573000000000" target="_blank" rel="noopener">
+              <span>💬</span> WhatsApp
+            </a>
+            <a class="btn-accion" href="tel:+573000000000">
+              <span>☎️</span> Llamar
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn-volver" id="volver-contacto">← Volver al inicio</button>
+    </section>
+
+  </main>
+
+  <!-- FOOTER PROFESIONAL -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2026 Feria Digital Agropecuaria. Todos los derechos reservados.</p>
+      <p class="footer-tagline">Impulsando la agricultura digital en América Latina</p>
+    </div>
+  </footer>
+
+  <script src="funcion.js"></script>
+</body>
+</html>
