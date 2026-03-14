@@ -5,10 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Feria Digital Agropecuaria</title>
   <link rel="stylesheet" href="estilo.css" />
+  <style>
+    /* Estilos adicionales para imágenes (mover a estilo.css si prefieres) */
+    .cultivo-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px 8px 0 0;
+      margin-bottom: 1rem;
+    }
+    .galeria-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .galeria-item img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s;
+    }
+    .galeria-item:hover img {
+      transform: scale(1.08);
+    }
+    .historia-imagen {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+    .historia-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1.2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+    .historia-card:hover {
+      transform: translateY(-5px);
+    }
+  </style>
 </head>
 
 <body>
-  <!-- HEADER PROFESIONAL -->
+
+  <!-- HEADER -->
   <header class="header">
     <div class="header-content">
       <div class="header-logo">
@@ -21,10 +66,10 @@
     </div>
   </header>
 
-  <!-- MAIN CONTENT -->
+  <!-- MAIN -->
   <main class="contenedor">
-    
-    <!-- VISTA PRINCIPAL (MENÚ INICIO) -->
+
+    <!-- VISTA INICIO -->
     <section id="vista-inicio" class="vista activa fade-in">
       <div class="intro-section">
         <h2>Bienvenido a tu Plataforma Agropecuaria</h2>
@@ -51,7 +96,7 @@
       </div>
     </section>
 
-    <!-- VISTA: TIPO DE CULTIVO -->
+    <!-- VISTA: TIPOS DE CULTIVO -->
     <section id="vista-cultivo" class="vista fade-in">
       <div class="section-header">
         <h2>🌱 Tipos de Cultivo</h2>
@@ -60,21 +105,25 @@
 
       <div class="cultivos-grid">
         <div class="cultivo-card">
+          <img src="https://c8.alamy.com/comp/2H01PBR/colombian-coffee-branch-with-ripe-and-red-coffee-beans-close-up-coffee-detail-blurred-background-for-advertising-2H01PBR.jpg" alt="Café colombiano en rama">
           <div class="cultivo-icon">☕</div>
           <h3>Café</h3>
           <p>Granos de alta calidad, producción sostenible y certificada internacionalmente.</p>
         </div>
         <div class="cultivo-card">
+          <img src="https://www.shutterstock.com/shutterstock/photos/533882299/display_1500/stock-photo-banana-tree-with-a-bunch-of-ripe-yellow-bananas-plant-natural-bio-jungle-533882299.jpg" alt="Racimo de plátanos maduros">
           <div class="cultivo-icon">🍌</div>
           <h3>Plátano</h3>
           <p>Variedades seleccionadas para mercado local e internacional.</p>
         </div>
         <div class="cultivo-card">
+          <img src="https://library.sweetmarias.com/wp-content/uploads/2020/08/Cacao-Pods-of-cacao-ripen-on-the-tree.-Sulawesi-seems-to-have-good-quality-cacao-but-I-have-never-seen-it-offered.-Pasongken-Sweet-Marias-70.jpg.webp" alt="Mazorcas de cacao en el árbol">
           <div class="cultivo-icon">🍫</div>
           <h3>Cacao</h3>
           <p>Chocolate de origen, con trazabilidad completa desde la planta.</p>
         </div>
         <div class="cultivo-card">
+          <img src="https://gregalder.com/yardposts/wp-content/uploads/2020/06/hass-avocado-tree-profile-1-1080x675.jpg" alt="Árbol de aguacate Hass con frutos">
           <div class="cultivo-icon">🥑</div>
           <h3>Aguacate</h3>
           <p>Producción orgánica y con prácticas agroforestales.</p>
@@ -100,44 +149,55 @@
       </div>
 
       <div id="galeria-container" class="galeria-grid">
-        <!-- Las fotos se mostrarán aquí -->
+        <div class="galeria-item">
+          <img src="https://library.sweetmarias.com/wp-content/uploads/2025/04/colombia-sweet-marias-edward-sandoval-2.jpg.webp" alt="Café colombiano maduro">
+        </div>
+        <div class="galeria-item">
+          <img src="https://thumbs.dreamstime.com/b/banana-plantation-ripe-bunches-yellow-bananas-agriculture-farming-tropical-country-trees-along-road-farm-fresh-390336024.jpg" alt="Racimo de bananos en plantación">
+        </div>
+        <div class="galeria-item">
+          <img src="https://thumbs.dreamstime.com/b/close-up-corn-cob-surrounded-green-leaves-maize-field-summer-agricultural-season-sunny-day-selective-focus-concept-385621033.jpg" alt="Mazorca de maíz fresca">
+        </div>
       </div>
 
       <button class="btn-volver" id="volver-galeria">← Volver al inicio</button>
     </section>
 
-    <!-- VISTA: HISTORIAS -->
+    <!-- VISTA: HISTORIAS (con mitos y leyendas campesinas) -->
     <section id="vista-historias" class="vista fade-in">
       <div class="section-header">
-        <h2>📖 Historias</h2>
-        <p>Conoce las experiencias de nuestros productores</p>
+        <h2>📖 Historias del Campo</h2>
+        <p>Conoce las leyendas y experiencias que los campesinos comparten alrededor del fogón, desde los cafetales hasta las selvas.</p>
       </div>
 
       <div class="historias-list">
         <div class="historia-card">
-          <div class="historia-avatar">👨‍🌾</div>
-          <h3>Juan Santiago</h3>
-          <p class="historia-date">Caffetero desde 1995</p>
+          <img src="https://cdn.culturagenial.com/es/imagenes/la-madremonte-cke.jpg?class=article" alt="La Madremonte protectora del monte" class="historia-imagen">
+          <div class="historia-avatar">🌿</div>
+          <h3>La Madremonte – Protectora de los cultivos</h3>
+          <p class="historia-date">Contada por Don José, caficultor de Antioquia</p>
           <p class="historia-content">
-            "Hace 25 años decidí cambiar los métodos tradicionales por técnicas sostenibles. Hoy, mis cultivos son más productivos y respetan el medio ambiente. La Feria Digital me ha permitido conectar con nuevos mercados."
+            "En las noches de luna llena, cuando uno va solo por el cafetal, se siente un viento que no es normal. Mi abuelo decía que era la Madremonte, una señora cubierta de musgo y hojas, que cuida los montes y las siembras. Si uno tala sin necesidad o quema el bosque, ella seca las matas de café y hace que las lluvias se vayan. Yo mismo dejé de usar machete en exceso después de oír su silbido entre los árboles. Respeto la tierra, porque ella nos da el café que nos sostiene."
           </p>
         </div>
 
         <div class="historia-card">
-          <div class="historia-avatar">👩‍🌾</div>
-          <h3>María Gómez</h3>
-          <p class="historia-date">Productora de Plátano</p>
+          <img src="https://www.culturarecreacionydeporte.gov.co/sites/default/files/styles/870_x_540/public/2022-08/ElMohan.jpg?itok=JIrrG8xj" alt="El Mohán en el río" class="historia-imagen">
+          <div class="historia-avatar">🌊</div>
+          <h3>El Mohán – El guardián de las quebradas</h3>
+          <p class="historia-date">Relato de Doña Carmen, platanera del Tolima</p>
           <p class="historia-content">
-            "Junto a mi familia hemos construido una pequeña granja que ahora es reconocida. Usar la plataforma digital fue un paso importante para vender directamente y obtener mejores precios."
+            "Cerca de la quebrada donde regamos los plátanos, los viejos contaban del Mohán: un hombre peludo, con ojos de fuego y pipa en la boca, que vive en las pozas profundas. Dicen que encanta a las lavanderas y a los muchachos que se acercan solos al agua. Una vez mi hermano desapareció dos días; volvió diciendo que un hombre barbudo le había dado pescado y le advirtió no contaminar el río. Desde entonces cuidamos el agua como si el Mohán nos estuviera mirando desde el fondo."
           </p>
         </div>
 
         <div class="historia-card">
-          <div class="historia-avatar">👨‍⚙️</div>
-          <h3>Carlos Rodríguez</h3>
-          <p class="historia-date">Innovador Agrícola</p>
+          <img src="https://cdn.culturagenial.com/es/imagenes/la-patasola-cke.jpg?class=article" alt="La Patasola en el bosque" class="historia-imagen">
+          <div class="historia-avatar">🌑</div>
+          <h3>La Patasola – La sombra de los caminos</h3>
+          <p class="historia-date">Historia de Don Luis, productor de maíz en los Llanos</p>
           <p class="historia-content">
-            "Implementé técnicas de agricultura de precisión en mi parcela de cacao. Los resultados: 40% más producción y menos desperdicio. La tecnología es el futuro."
+            "En los caminos de tierra que llevan a la parcela de maíz, después del atardecer, muchos hemos oído pasos de un solo pie. La Patasola aparece como una mujer hermosa al principio, pero cuando te acercas, ves que tiene una sola pata de animal y ojos que brillan. Dicen que fue una campesina traicionada que ahora vaga buscando venganza. Yo llevo siempre un machete y rezo un padrenuestro al pasar por ahí. Ella enseña que el respeto en el campo no solo es con la tierra, sino entre las personas."
           </p>
         </div>
       </div>
@@ -145,11 +205,11 @@
       <button class="btn-volver" id="volver-historias">← Volver al inicio</button>
     </section>
 
-    <!-- VISTA: CONTACTO -->
+    <!-- VISTA: CONTACTO (sin cambios) -->
     <section id="vista-contacto" class="vista fade-in">
       <div class="section-header">
         <h2>📞 Contacto</h2>
-        <p>Escríbenos, llamanos o comunícate por WhatsApp</p>
+        <p>Escríbenos, llámanos o comunícate por WhatsApp</p>
       </div>
 
       <div class="contacto-grid">
@@ -182,10 +242,10 @@
 
   </main>
 
-  <!-- FOOTER PROFESIONAL -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-content">
-      <p>&copy; 2026 Feria Digital Agropecuaria. Todos los derechos reservados.</p>
+      <p>© 2026 Feria Digital Agropecuaria. Todos los derechos reservados.</p>
       <p class="footer-tagline">Impulsando la agricultura digital en América Latina</p>
     </div>
   </footer>
